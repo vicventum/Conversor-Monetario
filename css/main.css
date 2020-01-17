@@ -1,0 +1,63 @@
+:root {
+  --box-1: lightsalmon;
+  --box-2: lightskyblue;
+  --box-3: lightcoral;
+  --box-4: lightgreen;
+  --box-5: lightpink;
+  --main: #303075;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--main);
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 800px;
+}
+
+.container .box {
+  height: 125px;
+  width: 125px;
+  border: 1px solid silver;
+}
+
+.container .box__1 {
+  background-color: var(--box-1);
+}
+
+.container .box__2 {
+  background-color: var(--box-2);
+}
+
+.container .box__3 {
+  background-color: var(--box-3);
+}
+
+.container .box__4 {
+  background-color: var(--box-4);
+}
+
+.container .box__5 {
+  background-color: var(--box-5);
+}
+/*# sourceMappingURL=main.css.map */

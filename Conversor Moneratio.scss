@@ -1,0 +1,145 @@
+:root {
+    --light: #ffffff;
+    --primary: darkslateblue;
+    --secondary: rgb(176, 194, 238);
+    --secondary-dark: rgb(176, 180, 238);
+    --valid: rgb(179, 255, 179);
+    --invalid: rgb(255, 189, 177);
+}
+
+$light: var(--light);
+$primary: var(--primary);
+$secondary: var(--secondary);
+$secondary-dark: var(--secondary-dark);
+$valid: var(--valid);
+$invalid: var(--invalid);
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+input,
+select {
+    color: $primary;
+}
+
+.btn {
+    border: none;
+    background-color: $secondary;
+    border-radius: 10px;
+    cursor: pointer;
+    color: $primary;
+    
+    &:hover {
+        background-color: $secondary-dark;
+    }
+}
+
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background:linear-gradient(
+        to bottom right,
+        lightblue 0%,
+        darkslateblue 100%
+    );
+}
+
+.conversor{
+    width: 450px;
+    height: 400px;
+    background-color: transparent;
+    border-radius: 20px;
+    position: relative;
+    color: darkslateblue;
+    padding: 20px;
+    // border: 1px solid   ;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        // padding: 10px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px black;
+        opacity: .3;
+
+    }
+}
+
+.screen {
+    background-color: $light;
+    width: 100%;
+    height: 30%;
+    opacity: .9;
+    text-align: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+   font-size: 3rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.fields {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 65%;
+    padding: 20px 0;
+    text-align: center;
+    
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+
+    &__input {
+        font-size: 1.5rem;
+        // background-color: ;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        transition: background-color .2s;
+
+        &--valid {background-color: $valid;}
+        &--invalid {background-color: $invalid;}
+    }
+
+    &__container-currency {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__currency-in,
+    &__currency-out {
+        flex: 1;
+    
+    }
+    &__change {
+        margin: 0 10px;
+    }
+    &__submit {
+        // grid-row: 2 span;
+        min-height: 80px;
+        font-size: 2rem;
+        // margin: 0 50px;
+    }
+    &__update {
+        // grid-column: 3 span;
+        height:  40px;
+        width: 30%;
+        justify-self: right;
+        align-self: end;
+        
+    }
+}

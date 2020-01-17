@@ -1,0 +1,160 @@
+:root {
+  --light: #ffffff;
+  --primary: darkslateblue;
+  --secondary: rgb(176, 194, 238);
+  --secondary-dark: rgb(176, 180, 238);
+  --valid: rgb(179, 255, 179);
+  --invalid: rgb(255, 189, 177);
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+input,
+select {
+  color: var(--primary);
+}
+
+.btn {
+  border: none;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.btn:hover {
+  background-color: var(--secondary-dark);
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(lightblue), to(darkslateblue));
+  background: linear-gradient(to bottom right, lightblue 0%, darkslateblue 100%);
+}
+
+.conversor {
+  width: 450px;
+  height: 400px;
+  background-color: transparent;
+  border-radius: 20px;
+  position: relative;
+  color: darkslateblue;
+  padding: 20px;
+}
+
+.conversor::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 10px 20px black;
+          box-shadow: 0 10px 20px black;
+  opacity: .3;
+}
+
+.screen {
+  background-color: var(--light);
+  width: 100%;
+  height: 30%;
+  opacity: .9;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fields {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 65%;
+  padding: 20px 0;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.fields__input {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  -webkit-transition: background-color .2s;
+  transition: background-color .2s;
+}
+
+.fields__input--valid {
+  background-color: var(--valid);
+}
+
+.fields__input--invalid {
+  background-color: var(--invalid);
+}
+
+.fields__container-currency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.fields__currency-in, .fields__currency-out {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.fields__change {
+  margin: 0 10px;
+}
+
+.fields__submit {
+  min-height: 80px;
+  font-size: 2rem;
+}
+
+.fields__update {
+  height: 40px;
+  width: 30%;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+/*# sourceMappingURL=Conversor Moneratio.css.map */
