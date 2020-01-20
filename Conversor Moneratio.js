@@ -32,14 +32,10 @@ eventListeners();
 function eventListeners() {
     addEventListener('DOMContentLoaded', llenadoInicial);
     addEventListener('DOMContentLoaded', cargaAPI);
-    // currencyIn.addEventListener('change', cambiaOption);
-    // currencyOut.addEventListener('change', cambiaOption);
-
     change.addEventListener('click', intercambiaOption);
     input.addEventListener('keyup', validar);
     input.addEventListener('blur', obtieneValor);
     submit.addEventListener('click', conversion);
-    // input.addEventListener('keypress', compruebaNumeros)
 }
 
 
@@ -146,7 +142,6 @@ function modificaOption(e, band) {
 
 function cambiaOption(e) {  
     e.preventDefault()
-    // console.log(e.target.id);
     let band;
 
     if (currencyIn.value === currencyOut.value){
